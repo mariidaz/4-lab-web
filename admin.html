@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Додати товар - Admin</title>
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../header/header.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="logo">Lumière Jewelry</h1>
+    <div class="header-links">
+      <a href="index.html" title="Home" class="icon-link">Home</a>
+      <a href="cart.html" title="Cart" class="icon-link">
+        <img src="./img/free-icon-shopping-cart-3225209.png" alt="Cart">
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="admin-form">
+      <h2>Додати новий товар</h2>
+      <form id="addProductForm">
+        <div class="form-group">
+          <label for="name">Назва (тип):</label>
+          <input type="text" id="product_text" name="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="img">URL зображення:</label>
+          <input type="text" id="product_img" name="img" required />
+        </div>
+
+        <div class="form-group">
+          <label for="price">Ціна:</label>
+          <input type="text" id="product_price" name="price" required />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Категорія:</label>
+          <select id="category" name="category" required>
+            <option value="ring">rings</option>
+            <option value="necklace">necklaces</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Опис:</label>
+          <textarea id="product_description" name="description" rows="3" required></textarea>
+        </div>
+
+        <button type="submit">Додати товар</button>
+        <div id="successMessage" class="success"></div>
+      </form>
+    </div>
+
+  </main>
+  <script src="./js/admin.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
